@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,41 +11,70 @@
 
 
 <body>
-<header>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <h1>Birds of NZ</h1>
-</header>
+    <header>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <h1>Birds of NZ</h1>
+    </header>
 
-<div class="sidebar" id="sidebar">
+    <div class="sidebar" id="sidebar">
+        <form id="form">
+            <label for="search status">Conservation Status</label>
+            <select id=" search status" name="search">
+                <option value="All">All</option>
+                <!--Co pilot -->
+                <option value="Not Threatened">Not Threatened</option>
+                <option value="Naturally Uncommon">Naturally Uncommon</option>
+                <option value="Relict">Relict</option>
+                <option value="Recovering">Recovering</option>
+                <option value="Declining">Declining</option>
+                <option value="Nationally Increasing">Nationally Increasing</option>
+                <option value="Nationally Vulnerable">Nationally Vulnerable</option>
+                <option value="Nationally Endangered">Nationally Endangered</option>
+                <option value="Nationally Critical">Nationally Critical</option>
+                <option value="Extinct">Extinct</option>
+                <option value="Data Deficient">Data Deficient</option>
 
-    <h3> Conservation Status</h3>
-    <div class = "conservation-text"> 
-        <p> Not Threatened</p>
-        <p> Naturally Uncommon</p>
-        <p>Relict</p>
-        <p>Recovering</p>	
-        <p>Declining</p>
-        <p>Nationally Increasing</p>
-        <p>Nationally Vulnerable</p>
-        <p>Nationally Endangered</p>	
-        <p>Nationally Critical</p>
-        <p>Extinct</p>	
-        <p>Data Deficient</p>
+            </select>
+
+            <label for="sort by ">Sort By</label>
+            <select id="sort by" name="sort">
+                <option value="lightest to heaviest">Lightest to Heaviest</option>
+                <option value="heaviest to lightest">Heaviest to Lightest</option>
+                <option value="alphabetical">Alphabetical</option>
+                <option value="reverse alphabetical">Reverse Alphabetical</option>
+                <option value="conservation status">Conservation Status</option>
+            </select>
+
+
+            <h3> Conservation Status</h3>
+            <div class="conservation-text">
+                <div id="status1"></div> <p>Not Threatened</p>
+                <div id="status2"></div> <p>Naturally Uncommon</p>
+                <div id="status3"></div> <p>Relicit</p>
+                <div id="status4"></div> <p>Recovering</p>
+                <div id="status5"></div> <p>Declining</p>
+                <div id="status6"></div> <p>Nationally Increasing</p>
+                <div id="status7"></div> <p>Nationally Vulnerable</p>
+                <div id="status8"></div> <p>Nationally Endangered</p>
+                <div id="status9"></div> <p>Nationally Critical</p>
+                <div id="status10"></div> <p>Extinct</p>
+                <div id="status11"></div> <p>Data Deficient</p>
+            </div>
+
+
+        </form>
     </div>
-</div>
-
-<script></script>
-     <main> 
+    <script></script>
+    <main>
         <div class="flex-container">
             <div>1</div>
             <div>2</div>
             <div>3</div>
             <div>4</div>
-          </div>
-     
+        </div>
 
-        </main>
+
+    </main>
 </body>
-
-<footer>Images and Information found from <a href="https://www.birdsnz.org.nz/">Birds of New Zealand</a>  </footer>
-</html> 
+<footer>Images and Information found from <a href="https://www.birdsnz.org.nz/">Birds of New Zealand</a> </footer>
+</html>

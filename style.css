@@ -48,15 +48,11 @@ main{
     text-align: center;
 
     display: flex;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     grid-area: main;
-    
-    
-
-
-
 }
 
 /* Lab 3.5 */
@@ -97,10 +93,85 @@ main{
 
   .sidebar{
     padding: 15px;
-    grid-column: span 2;
-    grid-row: span 8;
+    /*grid-column: span 2;
+    grid-row: span 8;*/
     background-color: #e9f2ed;
     font-weight: bold;
     font-size: medium;
+    display:block;
+    position: relative;
+    font: Montserrat;
   }
+
+  select{
+    width: 100%;
+    height: 30px;
+    margin:5px;
+    resize:vertical;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font: small;
+    padding: 3px;
+  }
+
+div label{
+  font-size: 15px;
+  color: #303834 ;
+}
+
+form{
+  padding:10px;
+}
+
+colour wheel{
+width: 20%;
+}
+
+.conservation-text {
+  grid-template-areas: repeat(10, "div p");
+  grid-template-columns: 1fr 9fr;
+  display: grid;
+ /* grid-gap: 10px;*/
+}
+
+.conservation-text >div{
+  make it a circle 
+  ;
+}
+
+#status1 {
+  background-color: #02a028;
+}
+#status2 {
+  background-color: #649a31;
+}
+#status3 {
+  background-color: #99cb68;
+}
+#status4 {
+  background-color: #fecc33;
+}
+#status5 {
+  background-color: #fe9a01;
+}
+#status6 {
+  background-color: #c26967;
+}
+#status7 {
+  background-color: #9b0000;
+}
+#status8 {
+  background-color:#660032;
+}
+#status9 {
+  background-color: #320033
+}
+#status10 {
+  background-color: black;
+}
+#status11 {
+  background-color: black;
+}
   
