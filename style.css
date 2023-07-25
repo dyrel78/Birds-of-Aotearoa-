@@ -1,13 +1,18 @@
+
+/* GitHub Co-Pilot suggestions were taken into account*/
+* {
+    /* No white space*/
+    margin: 0px;
+
+}
 header {
     background-color: #15c243;
     color: #fff;
     text-align: center;
     justify-content: center;
     width: 100%;
-
     padding: 10px;
-    margin-top: 0px;
-    border: 0px;
+    display: block;
 }
 
 h1 {
@@ -24,7 +29,10 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
-    display: block;
+
+    position:fixed;
+    bottom:0 ;
+    width: 100%;
 
 }
 
@@ -33,11 +41,66 @@ body {
 }
 
 main{
+    
     background-color: #fff;
     color: #000;
     padding: 20px;
     text-align: center;
-    display: block;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-area: main;
+    
+    
+
+
 
 }
 
+/* Lab 3.5 */
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  /* optional visual styles */
+  .flex-container > * {
+    color: #007AFF;
+    background: #B5D7FD;
+    height: 60px;
+    width: 60px;
+    padding: 15px;
+    border: 2px solid #007AFF;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: xx-large;
+    text-align: center;
+  }
+
+  .conservation-text{
+    background: rgb(255, 255, 255);
+    padding-top: 1em;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(0, 0, 0);
+
+  }
+
+  .sidebar{
+    padding: 15px;
+    grid-column: span 2;
+    grid-row: span 8;
+    background-color: #e9f2ed;
+    font-weight: bold;
+    font-size: medium;
+  }
+  
