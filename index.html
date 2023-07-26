@@ -18,8 +18,12 @@
 
     <div class="sidebar" id="sidebar">
         <form id="form">
-            <label for="search status">Conservation Status</label>
-            <select id=" search status" name="search">
+            <h2> Filter Birds</h2>
+            <label for="search">Search</label>
+            <input type="text" id="search" name="search" placeholder="Search for a bird">
+
+            <label for="searchStatus">Conservation Status</label>
+            <select id="searchStatus" name="search">
                 <option value="All">All</option>
                 <!--Co pilot -->
                 <option value="Not Threatened">Not Threatened</option>
@@ -36,15 +40,14 @@
 
             </select>
 
-            <label for="sort by ">Sort By</label>
-            <select id="sort by" name="sort">
+            <label for="sortBy ">Sort By</label>
+            <select id="sortBy" name="sort">
                 <option value="lightest to heaviest">Lightest to Heaviest</option>
                 <option value="heaviest to lightest">Heaviest to Lightest</option>
                 <option value="alphabetical">Alphabetical</option>
                 <option value="reverse alphabetical">Reverse Alphabetical</option>
                 <option value="conservation status">Conservation Status</option>
             </select>
-
 
             <h3> Conservation Status</h3>
             <div class="conservation-text">
