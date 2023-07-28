@@ -1,38 +1,24 @@
+let URL = "./nzbird.json";
 
-// populate();
-fetchData();
+/*async function fetchData() {
+    const response = await fetch(URL);
+    if (!response.ok) {
+      console.error(response.status);
+    }
+    const birds = await response.json();
+    console.log(birds);
+    birds.forEach(bird => {
+      const birdArticle = createBirdElement(bird);
+    });
+  }*/
 
-
-function fetchData() {
-
-fetch('./data/nz_birds.json').then(response).then(data);
-}
-
-
-
-function response(){
-  if (response.status != 200) {
-		return console.log('fail');
-	}
-	if (response.status == 200) {
-		return response.text();
-	}
-}
-
-function
- 
-
-
-function createBirdElement(obj){
-  const birdArticle = document.createElement('article');
+/*function createBirdElement(obj){
+  const main = document.querySelector('#bird-container');
+    const birdArticle = document.createElement('article');
     birdArticle.setAttribute('class', 'birdArticle');
-    birdArticle.append(newBirdHeaderElement('bird-header', bird));
-    birdArticle.append(newImgElement('bird-main-img', bird));
-    birdArticle.append(newBirdTextElement('bird-textbox', bird));
-
-    document.querySelector('#bird-content-container').prepend(birdArticle);
+    main.appendChild(birdArticle);
     return birdArticle;
-}
+}*/
 
 
 
@@ -41,15 +27,16 @@ function createBirdElement(obj){
 
 
 async function populate() {
-    const response = await fetch("./data/nz_birds.json");
+    const response = await fetch(URL);
     if (!response.ok) {
       console.error(response.status);
     }
-    const birds =  response.json();
+    const birds =  await response.json();
   
-    const section = document.querySelector("section");
-    for (const birb of birds) {
+    const section = document.querySelector("#bird-container");
+    for (let birb of birds) {
       const myArticle = document.createElement("article");
+
       const primaryName = document.createElement("h2");
       const engName = document.createElement("p");
       const sciName = document.createElement("p");
@@ -58,6 +45,7 @@ async function populate() {
       const otherNames = document.createElement("ul");
       const status = document.createElement("p");
       const photo = document.createElement("img");
+      const credit = document.createElement("p");
       const size = document.createElement("ul");
       const length = document.createElement("li");
       const weight = document.createElement("li");
@@ -75,7 +63,7 @@ async function populate() {
         otherNames.appendChild(li);
       }
       photo.src = birb.photo.source;
-      photo.alt = birb.photo.credit;
+      credit.textContent = birb.photo.credit;
       length.textContent = birb.size.length.value + " " + birb.size.length.units;
       weight.textContent = birb.size.weight.value + " " + birb.size.weight.units;
       size.appendChild(length);
@@ -90,15 +78,15 @@ async function populate() {
       myArticle.appendChild(status);
       myArticle.appendChild(photo);
       myArticle.appendChild(size);
-      document.body.appendChild(section);
+      myArticle.appendChild(credit);
 
-      document.querySelector('#card-container').apprend(myArticle);
+      section.appendChild(myArticle);
 
     }
-    section.appendChild(myArticle);
 
 
   }
-  
+  populate();
+  //fetchData();
 
   
