@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birds of NZ</title>
+    <title>Birds of Aotearoa</title>
     <link href="./style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script defer src="birbs.js"></script>
+
 </head>
 
 
@@ -17,7 +19,6 @@
     </header>
 
     <div class="sidebar" id="sidebar">
-        <form id="form">
             <h2> Filter Birds</h2>
             <label for="search">Search</label>
             <input type="text" id="search" name="search" placeholder="Search for a bird">
@@ -48,8 +49,9 @@
                 <option value="reverse alphabetical">Reverse Alphabetical</option>
                 <option value="conservation status">Conservation Status</option>
             </select>
-
-            <h3> Conservation Status</h3>
+            <br> <br>
+            <div class = "sidebar-status-texts">       
+            <h3 id = "conservation-status-title"> Conservation Status</h3>
             <div class="conservation-text">
                 <div id="status1"></div> <p>Not Threatened</p>
                 <div id="status2"></div> <p>Naturally Uncommon</p>
@@ -63,21 +65,22 @@
                 <div id="status10"></div> <p>Extinct</p>
                 <div id="status11"></div> <p>Data Deficient</p>
             </div>
-
+        </div>
 
         </form>
     </div>
     <script></script>
+
+
     <main>
-        <div class="flex-container">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
+
+        <div id = "bird-container" class="bird-container">
         </div>
+        <div>TEST</div>
 
 
     </main>
 </body>
 <footer>Images and Information found from <a href="https://www.birdsnz.org.nz/">Birds of New Zealand</a> </footer>
-</html>
+</html> 
+
