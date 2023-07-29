@@ -3,6 +3,9 @@
 * {
     /* No white space*/
     margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Zilla Slab', serif;
+    
 
 }
 header {
@@ -14,10 +17,17 @@ header {
     padding: 10px;
     display: block;
     position: fixed;
+    font-size: x-large;
 
     grid-column-start: 1;
     grid-column: span 3;
     z-index: 1000;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Zilla Slab', serif;
+
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .7);
+-moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
 
 }
 
@@ -40,11 +50,15 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
-
+  z-index: 1000;
     position:fixed;
     bottom:0 ;
     width: 100%;
 
+
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .7);
+-moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
 }
 
 body {
@@ -128,13 +142,42 @@ main>article{
   padding:10px;
   position: fixed;
   z-index: 1;
-  top: 97px;
+  top: 100px;
   left: 0;
   overflow-x: hidden;
   padding-top: 20px;
   transition: 0.5s;
 
 
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .7);
+-moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+
+}
+
+.filter-button{
+
+  width: 100%;
+  height: 35px;
+  background-color: #15c243;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Zilla Slab', serif;
+
+}
+.filter-button:hover{
+  background-color: #fff;
+  color: #15c243;
+  border: 1px solid #15c243;
+  transition: 0.5s;
 }
 
   .conservation-text{
@@ -144,8 +187,14 @@ main>article{
     display: flex;
     flex-wrap: wrap;
     color: rgb(0, 0, 0);
+   position : absolute;
+   top:325px;
+  }
 
-
+  #conservation-status-title{
+    display: flex;
+    position : absolute;
+    top:300px;
   }
   span {
     display: inline-block;
@@ -155,7 +204,7 @@ main>article{
  
 
   select{
-    width: 175px;
+    width: 100%;
     height: 25px;
     margin:5px;
     resize:vertical;
@@ -166,7 +215,7 @@ main>article{
     font: small;
   }
   input{
-    width: 175px;
+    width: 100%;
       height: 30px;
       margin:5px;
       resize:vertical;
@@ -254,7 +303,7 @@ form{
 
 .birb-photo{
   width: 100%;
-  height: 15em;
+  height: 60%;
   object-fit: cover;
   /*border: 2px solid #fff;
   box-shadow: 0 0 0 2px #000;
@@ -268,29 +317,122 @@ form{
 }
 
 .birb-article{
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
 margin-bottom: 40px;
 background-color: lightblue;
-text-align: center;
-width: 250px;
-height: 480px;
+/*text-align: center;*/
+width: 350px;
+height: 650px;
 grid-column-start: 1;
 gap:40px;
-
 justify-content: stretch;
 align-items: stretch;
+position: relative;
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Zilla Slab', serif;
+
+
+/* Shadow*/
+-webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .7);
+-moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+
+}
+
+.birb-article:hover{
+  box-shadow: 2px 2px 10px 5px #007AFF;
+  transition: box-shadow 0.25s ease-in-out;
+}
+
+.birb-article > p,h2{
+  padding-left: 25px;
 }
 
 .birb-primary-name{
   text-align: left;
   color: black;
+  z-index: 100;
+  font-size: 35px;
+  position: absolute;
+  top:300px;
+  width: 100%;
+  height: 100%;
+  /*Font + Text Colour */
+  color: white;
+  font-weight: 200;
+
+}
+.birb-credit{
+  position: absolute;
+  top: 350px;
+  color: white;
+
 }
 
-.bird-container{
+
+.birb-colour-circle{
+  position: absolute;
+   z-index: 100;
+    border-radius: 50px;
+    height: 55px;
+    width: 55px;
+    left:75%;
+    top: 360px;
+    border: 2px solid #fff;
+
+}
+
+
+.birb-english-name{
+  text-align: left;
+  color: black;
+  z-index: 100;
+  font-size: 25px;
+  margin-bottom: 50px;
+  position: relative;
+  top:20px;
   
 }
+
+.birb-scientific-name, .birb-order, .birb-family, .birb-status, .birb-length, .birb-weight{
+  left:140px;
+  position: relative;
+  font-weight: lighter;
+
+  
+}
+
+
+
+
+
+
+.birb-family{
+  grid-area: right;
+}
+
+.image-article{
+  position: absolute;
+ 
+}
+
+.birb-labels{
+  color: black;
+  position: relative;
+  top: 470px;
+  left: -345px;
+  font-weight: 300;
+  font-family: 'Zilla Slab', serif;
+
+  
+
+
+}
+
+
+
 /*  width: 100%;
   height: 100%;
   display: flex;

@@ -6,7 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birds of Aotearoa</title>
     <link href="./style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Zilla+Slab&display=swap" rel="stylesheet">
+
+     <!-- Lighter font
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+     -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
     <script defer src="birbs.js"></script>
 
 </head>
@@ -50,6 +60,8 @@
                 <option value="conservation status">Conservation Status</option>
             </select>
             <br> <br>
+            <button id="filter-button" class="filter-button">Filter</button>
+
             <div class = "sidebar-status-texts">       
             <h3 id = "conservation-status-title"> Conservation Status</h3>
             <div class="conservation-text">
@@ -75,8 +87,6 @@
     <main id = "bird-container" class ="bird-container">
 
       <!-- <div id = "bird-container" class="bird-container"></div> -->
-
-
     </main>
 </body>
 <footer>Images and Information found from <a href="https://www.birdsnz.org.nz/">Birds of New Zealand</a> </footer>
