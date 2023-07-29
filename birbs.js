@@ -123,20 +123,26 @@ async function populate() {
 
     const sciNameLabel = document.createElement("p");
     sciNameLabel.textContent = "Scientific Name: ";
+    sciNameLabel.setAttribute("class", "sci-name-label");
     sciName.appendChild(sciNameLabel);
  
     const orderLabel = document.createElement("p");
     orderLabel.textContent = "Order:";
+    orderLabel.setAttribute("class", "order-label");
     const familyLabel = document.createElement("p");
+    familyLabel.setAttribute("class", "family-label");
     familyLabel.textContent = "Family:";
 
     const statusLabel = document.createElement("p");
     statusLabel.textContent = "Status:";
+    statusLabel.setAttribute("class", "status-label");
 
     const lengthLabel = document.createElement("p");
     lengthLabel.textContent = "Length:";
+    lengthLabel.setAttribute("class", "length-label");
     const weightLabel = document.createElement("p");
     weightLabel.textContent = "Weight";
+    weightLabel.setAttribute("class", "weight-label");
 
 
 
@@ -181,11 +187,13 @@ async function populate() {
       //Image and article are children of section
      // section.appendChild(imageArticle);
            section.appendChild(myArticle);
-           section.appendChild(labels);
+           myArticle.appendChild(labels);
+
+           // Label not part of birc article 
+           /*section.appendChild(labels);*/
 
       //section.appendChild(photoArticle);
       //section.appendChild(birbText);
-
       //myArticle.append(imageArticle);
 
       
@@ -196,4 +204,5 @@ async function populate() {
   }
   populate();
 
+  
   
