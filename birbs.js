@@ -1,31 +1,5 @@
 let URL = "./nzbird.json";
 
-/*async function fetchData() {
-    const response = await fetch(URL);
-    if (!response.ok) {
-      console.error(response.status);
-    }
-    const birds = await response.json();
-    console.log(birds);
-    birds.forEach(bird => {
-      const birdArticle = createBirdElement(bird);
-    });
-  }*/
-
-/*function createBirdElement(obj){
-  const main = document.querySelector('#bird-container');
-    const birdArticle = document.createElement('article');
-    birdArticle.setAttribute('class', 'birdArticle');
-    main.appendChild(birdArticle);
-    return birdArticle;
-}*/
-
-
-
-
-
-
-
 async function populate() {
     const response = await fetch(URL);
     if (!response.ok) {
@@ -40,6 +14,7 @@ async function populate() {
 
       const imageArticle = document.createElement("div");
       const myArticle = document.createElement("div");
+      const photoArticle = document.createElement("div");
 
       const colourCircle = document.createElement("div");
       const photo = document.createElement("img");
@@ -57,10 +32,12 @@ async function populate() {
 
 
       //Giving ID's
-      imageArticle.setAttribute("class", "birb-image-article");
+      //imageArticle.setAttribute("class", "birb-image-article");
       colourCircle.setAttribute("class", "birb-colour-circle");
+      photoArticle.setAttribute("class", "birb-photo-article");
 
       myArticle.setAttribute("class", "birb-article");
+
       photo.setAttribute("class", "birb-photo");
       credit.setAttribute("class", "birb-credit");
       primaryName.setAttribute("class", "birb-primary-name");
@@ -140,6 +117,8 @@ async function populate() {
 
     const labels = document.createElement("div");
     labels.setAttribute("class", "birb-labels");
+    const birbText = document.createElement("div");
+    birbText.setAttribute("class", "birb-text-labels");
 
 
     const sciNameLabel = document.createElement("p");
@@ -169,8 +148,21 @@ async function populate() {
     labels.appendChild(lengthLabel);
     labels.appendChild(weightLabel);
 
+    /*
+    birbText.appendChild(sciName);
+    birbText.appendChild(order);
+    birbText.appendChild(family);
+    birbText.appendChild(status);
+    birbText.appendChild(length);
+    birbText.appendChild(weight);
 
+    photoArticle.appendChild(photo);
+    photoArticle.appendChild(primaryName);
+    photoArticle.appendChild(colourCircle);
+    photoArticle.appendChild(credit);
+*/
 
+      
       myArticle.appendChild(photo);
       myArticle.appendChild(primaryName);
       myArticle.appendChild(credit);
@@ -184,11 +176,15 @@ async function populate() {
       myArticle.appendChild(status);
       myArticle.appendChild(length);
       myArticle.appendChild(weight);
+      
 
       //Image and article are children of section
      // section.appendChild(imageArticle);
-      section.appendChild(myArticle);
-      section.appendChild(labels);
+           section.appendChild(myArticle);
+           section.appendChild(labels);
+
+      //section.appendChild(photoArticle);
+      //section.appendChild(birbText);
 
       //myArticle.append(imageArticle);
 
@@ -199,6 +195,5 @@ async function populate() {
 
   }
   populate();
-  //fetchData();
 
   
