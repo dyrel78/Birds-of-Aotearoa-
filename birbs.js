@@ -16,10 +16,12 @@ const statusArr = new Array(
   "Nationally Critical",
   "Extinct",
   "Data Deficient");
+
+  const section2 = document.getElementById('bird-container');
+
 let birbArr = [];
 let id = null;
 
-const section2 = document.getElementById('bird-container');
 
 async function populate() {
   const response = await fetch(URL);
@@ -148,7 +150,7 @@ function createBirdPanel(birb) {
 
 
   const sciNameLabel = document.createElement("p");
-  sciNameLabel.textContent = "Scientific Name: ";
+  sciNameLabel.textContent = "Scientific Name:";
   sciNameLabel.setAttribute("class", "sci-name-label");
   sciName.appendChild(sciNameLabel);
 
@@ -167,7 +169,7 @@ function createBirdPanel(birb) {
   lengthLabel.textContent = "Length:";
   lengthLabel.setAttribute("class", "length-label");
   const weightLabel = document.createElement("p");
-  weightLabel.textContent = "Weight";
+  weightLabel.textContent = "Weight:";
   weightLabel.setAttribute("class", "weight-label");
 
 
@@ -224,9 +226,22 @@ function createBirdPanel(birb) {
   //myArticle.append(imageArticle);
 
 
+  // COLOUR CHANGE HOVER
+
+// Set the background color for the color circle
+  const circleBgColor = getStatusColor(birb.status);
+  //colourCircle.style.backgroundColor = circleBgColor;
+
+  // Set the custom property --circle-bg-color on the birb-article element
+  myArticle.style.setProperty('--circle-bg-color', circleBgColor);
+
+
+
   section2.appendChild(myArticle);
   birb.element = myArticle;
   birbArr.push(birb);
+
+  
 }
 
 
@@ -253,6 +268,7 @@ function searchNames(input, bird) {
 
 function addBirds(currentBirds) {
   section2.innerHTML = "";
+  //section2 = document.querySelector('section2');
   currentBirds.forEach(birb => {
     section2.append(birb.element);
   });
@@ -313,6 +329,7 @@ document.getElementById("filter-button").addEventListener('click', function () {
   // Search by name
   if (searchTerm === "") {
     currentBirds = birbArr.slice();
+    //currentBirds = birbArr;
   } else {
     currentBirds = [];
     // Remove macrons and diacritics from search term
@@ -366,7 +383,35 @@ document.getElementById("filter-button").addEventListener('click', function () {
 });
 
 
+function getStatusColor(status) {
+  switch (status.toLowerCase()) {
+    case "not threatened":
+      return "#02a028";
+    case "naturally uncommon":
+      return "#649a31";
+    case "relict":
+      return "#99cb68";
+    case "recovering":
+      return "#02a028";
+    case "declining":
+      return "#fe9a01";
+    case "nationally increasing":
+      return "#c26967";
+    case "nationally vulnerable":
+      return "#9b0000";
+    case "nationally endangered":
+      return "#660032";
+    case "nationally critical":
+      return "#320033";
+    case "extinct":
+      return "black";
+    case "data deficient":
+      return "black";
+    default:
+      return "#02a028"; // Default color if status is not recognized
+  }
+}
 
 
 
-
+//Change colour of shadow on hover for each bird
