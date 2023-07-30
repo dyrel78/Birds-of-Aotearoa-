@@ -1,3 +1,8 @@
+
+<!-- 
+
+@author Dyrel Lumiwes 
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +21,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-
     <script defer src="birbs.js"></script>
 
 </head>
@@ -28,6 +32,7 @@
         <h1>Birds of NZ</h1>
     </header>
 
+    
     <div class="sidebar" id="sidebar">
             <h2> Filter Birds</h2>
             <label for="search">Search</label>
@@ -53,11 +58,13 @@
 
             <label for="sortBy ">Sort By</label>
             <select id="sortBy" name="sort">
-                <option value="lightest to heaviest">Lightest to Heaviest</option>
-                <option value="heaviest to lightest">Heaviest to Lightest</option>
+                <option value = "default">Default</option>
+                <option value="lightest-to-heaviest">Lightest to Heaviest</option>
+                <option value="heaviest-to-ightest">Heaviest to Lightest</option>
                 <option value="alphabetical">Alphabetical</option>
-                <option value="reverse alphabetical">Reverse Alphabetical</option>
-                <option value="conservation status">Conservation Status</option>
+                <option value="alphabetical-Maori">Alphabetical (Maori)</option>
+                <option value="shortest-to-longest">Shortest to longest</option>
+                <option value="longest-to-shortest">Longest to shortest</option>
             </select>
             <br> <br>
             <button id="filter-button" class="filter-button">Filter</button>
