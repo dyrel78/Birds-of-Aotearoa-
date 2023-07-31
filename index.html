@@ -29,7 +29,7 @@
 <body>
     <header>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-        <h1>Birds of NZ</h1>
+        <h1>Birds of Aotearoa</h1>
         
 
     </header>
@@ -60,7 +60,7 @@
 
             <label for="sortBy">Sort By</label>
             <select id="sortBy" name="sort">
-                <option value = "default">Default</option>
+                <option value = "default">Default</option> <!-- Alphabetical by Maori-->
                 <option value="lightest-to-heaviest">Lightest to Heaviest</option>
                 <option value="heaviest-to-ightest">Heaviest to Lightest</option>
                 <option value="alphabetical">Alphabetical</option>
@@ -70,6 +70,9 @@
             </select>
             <br> <br>
             <button id="filter-button" class="filter-button">Filter</button>
+            <div class = "birbs-found" id="birbs-found">
+                <p id="birbs-found-text"> 0 birds found </p>
+            </div>
 
             <div class = "sidebar-status-texts">       
             <h3 id = "conservation-status-title"> Conservation Status</h3>

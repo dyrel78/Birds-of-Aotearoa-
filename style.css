@@ -194,7 +194,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
   width: 90%;
   height: 30px;
   position: absolute;
-  top:230px;
+  top:220px;
       margin:5px;
 
   background-color: #15c243;
@@ -243,7 +243,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
 
   select{
     width: 100%;
-    height: 30px;
+    height: 27px;
     margin:5px;
     resize:vertical;
     border-radius: 5px;
@@ -254,7 +254,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
   }
   input{
     width: 100%;
-      height: 30px;
+      height: 27px;
       margin:5px;
       resize:vertical;
       border-radius: 5px;
@@ -273,6 +273,14 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
   input:hover{
     box-shadow: 2px 2px 10px 5px #007AFF;
     transition: box-shadow 0.25s ease-in-out;
+  }
+
+  .birbs-found{
+    position: relative;
+    top: 27px;
+    font-size: 15px;
+    color: #303834 ;
+    left: 5px;
   }
 
 

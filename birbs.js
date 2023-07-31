@@ -126,7 +126,7 @@ function createBirdPanel(birb) {
     colourCircle.style.backgroundColor = "#99cb68";
   }
   else if (birb.status.toLowerCase().localeCompare("recovering") === 0) {
-    colourCircle.style.backgroundColor = "#02a028";
+    colourCircle.style.backgroundColor = "#fecc33";
   }
   else if (birb.status.toLowerCase().localeCompare("declining") === 0) {
     colourCircle.style.backgroundColor = "#fe9a01";
@@ -278,6 +278,11 @@ function searchNames(input, bird) {
 function addBirds(currentBirds) {
   section2.innerHTML = "";
   //section2 = document.querySelector('section2');
+  const birbsFound = document.getElementById("birbs-found");
+  birbsFound.textContent = `Found ${currentBirds.length} bird(s).`;
+
+
+
   currentBirds.forEach(birb => {
     section2.append(birb.element);
   });
@@ -368,6 +373,7 @@ document.getElementById("filter-button").addEventListener('click', function () {
   switch (searchOption) {
     case 0:
      currentBirds.sort(alphabeticalByMaori);
+     break;
     case 1:
       currentBirds.sort(lightestToHeaviest);
       break;
@@ -386,6 +392,8 @@ document.getElementById("filter-button").addEventListener('click', function () {
     case 6:
       currentBirds.sort(longestToShortest);
       break;
+
+    
   }
   //Birds Found
   addBirds(currentBirds);
@@ -401,7 +409,7 @@ function getStatusColor(status) {
     case "relict":
       return "#99cb68";
     case "recovering":
-      return "#02a028";
+      return "#fecc33";
     case "declining":
       return "#fe9a01";
     case "nationally increasing":
