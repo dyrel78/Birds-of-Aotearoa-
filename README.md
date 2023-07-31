@@ -8,7 +8,17 @@ Dyrel Lumiwes - 2962217
 
 
 **Extra Features**
-UI detail: When hovering over bird container, shadow will be the same colour as the status according to the legend on the sidebar.
+
+UI details: 
+* When hovering over bird container, shadow will be the same colour as the status according to the legend on the sidebar.
+
+QOL:
+
+*  Displays number of birds found for each conservation status.
+*  Added Reset
+*  Responsive Design
+  
+
 
 Dynamic 
 

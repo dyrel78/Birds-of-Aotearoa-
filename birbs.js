@@ -72,13 +72,12 @@ function createBirdPanel(birb) {
   //imageArticle.setAttribute("class", "birb-image-article");
   colourCircle.setAttribute("class", "birb-colour-circle");
   photoArticle.setAttribute("class", "birb-photo-article");
-
   myArticle.setAttribute("class", "birb-article");
+
 
   photo.setAttribute("class", "birb-photo");
   credit.setAttribute("class", "birb-credit");
   primaryName.setAttribute("class", "birb-primary-name");
-
   engName.setAttribute("class", "birb-english-name");
   sciName.setAttribute("class", "birb-scientific-name");
   order.setAttribute("class", "birb-order");
@@ -335,6 +334,7 @@ function longestToShortest(a, b) {
 
 
 
+
 // Search when filter button clicked
 document.getElementById("filter-button").addEventListener('click', function () {
   const searchTerm = document.querySelector("#search").value;
@@ -397,6 +397,19 @@ document.getElementById("filter-button").addEventListener('click', function () {
   }
   //Birds Found
   addBirds(currentBirds);
+});
+
+
+// Reset button
+document.getElementById("reset-button").addEventListener('click', function () {
+  document.querySelector("#search").value = "";
+  document.querySelector("#searchStatus").selectedIndex = 0;
+  document.querySelector("#sortBy").selectedIndex = 0;
+  addBirds(birbArr);
+  
+
+
+
 });
 
 

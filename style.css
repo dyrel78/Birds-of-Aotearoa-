@@ -278,9 +278,23 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
   .birbs-found{
     position: relative;
     top: 27px;
-    font-size: 15px;
+    font-size: 13px;
     color: #303834 ;
     left: 5px;
+  }
+
+  .reset-button{
+    position: relative;
+    left:60%;
+    top:1%;
+    width:80px;
+  }
+
+  .reset-button:hover{
+    background-color: #fff;
+    color: #15c243;
+    border: 1px solid #15c243;
+    transition: 0.5s;
   }
 
 
