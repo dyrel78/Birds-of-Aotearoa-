@@ -3,6 +3,15 @@ let URL = "./nzbird.json";
 populate();
 
 
+// object.addEventListener("click", myScript);
+
+// const button = document.createElement("button");
+// button.textContent = "Dark Mode";
+// button.setAttribute("class", "dark-mode-button");
+// button.addEventListener("click", darkMode);
+// document.header.appendChild(button);
+// function darkMode(){
+// }
 
 const statusArr = new Array(
   "Not Threatened",
@@ -206,7 +215,7 @@ function createBirdPanel(birb) {
   myArticle.appendChild(sciName);
   myArticle.appendChild(order);
   myArticle.appendChild(family);
-  //myArticle.appendChild(otherNames);
+  myArticle.appendChild(otherNames);
   myArticle.appendChild(status);
   myArticle.appendChild(length);
   myArticle.appendChild(weight);
@@ -235,8 +244,6 @@ function createBirdPanel(birb) {
   // Set the custom property --circle-bg-color on the birb-article element
   myArticle.style.setProperty('--circle-bg-color', circleBgColor);
 
-
-
   section2.appendChild(myArticle);
   birb.element = myArticle;
   birbArr.push(birb);
@@ -257,6 +264,8 @@ function searchNames(input, bird) {
   const maoriName = bird.primary_name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   const sciName = bird.scientific_name.toLowerCase();
   const engName = bird.english_name.toLowerCase();
+
+   
   if (maoriName.includes(input) || sciName.includes(input) || engName.includes(input)) {
     return true;
   } else {
@@ -358,7 +367,7 @@ document.getElementById("filter-button").addEventListener('click', function () {
   const searchOption = document.querySelector("#sortBy").selectedIndex;
   switch (searchOption) {
     case 0:
-        currentBirds.sort(alphabeticalByMaori);
+     currentBirds.sort(alphabeticalByMaori);
     case 1:
       currentBirds.sort(lightestToHeaviest);
       break;

@@ -8,6 +8,7 @@
     
 
 }
+
 header {
     background-color: #15c243;
     color: #fff;
@@ -44,14 +45,14 @@ h1 {
 }
 
 h2{
-  width: 200px;
+  width: 100%;
   bottom: 20px;
 }
 footer {
     background-color: #15c243;
     color: #fff;
     text-align: center;
-  z-index: 1000;
+    z-index: 1000;
     position:fixed;
     bottom:0 ;
     width: 100%;
@@ -77,8 +78,9 @@ footer >a {
 
 body {
   display: grid;
-  grid-template-columns: 200px 3fr;
-  grid-template-rows: 100px 1fr 100px;
+  grid-template-columns: 200px ;
+  grid-template-rows: 120px 1fr 100px;
+
   gap: 10px;
   /* padding: 10px; */
   min-width: 100vw;
@@ -365,7 +367,7 @@ border-top-left-radius: 20px;
 border-top-right-radius: 20px;
 border-bottom-left-radius: 20px;
 border-bottom-right-radius: 20px;
-margin-bottom: 40px;
+margin-bottom:30px;
 background-color: lightblue;
 /*text-align: center;*/
 /*width: 375px;*/
@@ -391,7 +393,6 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
   /* box-shadow: 2px 2px 10px 5px #007AFF; */
   
   transition: box-shadow 0.25s ease-in-out;
-  
   box-shadow: 2px 2px 10px 5px var(--circle-bg-color);
 } 
 
@@ -453,6 +454,9 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
 
   
 }
+.birb-other-names{
+  display:none;
+}
 
 .birb-scientific-name, .birb-order, .birb-family, .birb-status, .birb-length, .birb-weight{
   left:150px;
@@ -463,9 +467,15 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
   top:50px;
   margin:0px;
   text-overflow: ellipsis;
-  overflow:hidden;
+  overflow-x :hidden;
+  
 
   
+}
+.birb-scientific-name{
+  width: 160px;
+  left:-20px;
+
 }
 
 .sci-name-label, .order-label, .family-label, .status-label, .length-label, .weight-label{
