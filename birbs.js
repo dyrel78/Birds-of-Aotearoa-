@@ -3,6 +3,9 @@ let URL = "./nzbird.json";
 populate();
 
 
+
+
+
 // object.addEventListener("click", myScript);
 
 // const button = document.createElement("button");
@@ -27,6 +30,7 @@ const statusArr = new Array(
   "Data Deficient");
 
   const section2 = document.getElementById('bird-container');
+  
 
 let birbArr = [];
 let id = null;
@@ -222,7 +226,7 @@ function createBirdPanel(birb) {
   myArticle.appendChild(credit);
   myArticle.appendChild(colourCircle);
 
-  // myArticle.appendChild(engName);
+  myArticle.appendChild(engName);
   // myArticle.appendChild(sciName);
   // myArticle.appendChild(order);
   // myArticle.appendChild(family);
@@ -289,6 +293,7 @@ function addBirds(currentBirds) {
   section2.innerHTML = "";
   //section2 = document.querySelector('section2');
   const birbsFound = document.getElementById("birbs-found");
+
   birbsFound.textContent = `Found ${currentBirds.length} bird(s).`;
 
 
@@ -452,6 +457,21 @@ function getStatusColor(status) {
       return "#02a028"; // Default color if status is not recognized
   }
 }
+
+function closeSidebar(){
+  document.getElementById("sidebar").style.width = "0";
+}
+
+function openSidebar(){
+  document.getElementById("sidebar").style.width = "200";
+}
+
+
+// const openBar = document.getElementById("open-sidebar-button");
+
+// openBar.addEventListener('click', () => {
+//   sidebar.classList.toggle('hidden');
+// });
 
 
 

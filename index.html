@@ -29,14 +29,18 @@
 <body>
     <header>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <a href="javascript:void(0)" class="open-sidebar-button" onclick="openSidebar()">&equiv;</a>
+
         <h1>Birds of Aotearoa</h1>
         
 
     </header>
 
     
-    <div class="sidebar" id="sidebar">
-            <h2> Filter Birds</h2>
+    <aside class="sidebar" id="sidebar">
+            <a href="javascript:void(0)" class="close-sidebar-button" onclick="closeSidebar()">&times;</a>
+
+          <h2> Filter Birds</h2>
             <label for="search">Search</label>
             <input type="text" id="search" name="search" placeholder="Search for a bird">
 
@@ -94,10 +98,11 @@
             </div>
         </div>
 
-    </div>
+    </aside>
 
 
     <main id = "bird-container" class ="bird-container">
+
       <!-- <div id = "bird-container" class="bird-container"></div> -->
       
     </main>

@@ -79,7 +79,7 @@
   body {
   display: grid;
   grid-template-columns: 200px ;
-  grid-template-rows: 80px;
+  grid-template-rows: 0px;
   gap: 10px;
   /* padding: 10px; */
   min-width: 100vw;
@@ -158,7 +158,7 @@
   height: 100%;
   width: 200px;
   background-color: lightgray;
-  padding:10px;
+  padding:10px; 
   position: fixed;
   z-index: 1;
   top: 60px;
@@ -288,6 +288,10 @@
   font-size: 15px;
   color: #303834 ;
   }
+  aside label{
+    font-size: 15px;
+    color: #303834 ;
+    }
   
   form{
   padding:10px;
@@ -371,7 +375,7 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    z-index: 999;
+    z-index: 100000;
     box-shadow: 2px 2px 10px 5px var(--circle-bg-color);
   
   
@@ -381,6 +385,7 @@
   position: relative;
   display: flex;
   gap:20px;
+
   }
   
   .birb-article{
@@ -388,7 +393,8 @@
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  margin-bottom:30px;
+  margin-bottom:-40px;
+  margin-top: 80px;
   background-color: lightblue;
   /*text-align: center;*/
   /*width: 375px;*/
@@ -563,9 +569,25 @@
   }
   
   
+  
   .close-sidebar-button{
-    display: none;
-  }
+    position: absolute;
+    font-size: 50px;
+    color: red;
+    margin-left: 170px;
+    margin-top: -20px;
+    }
+
+
+  .open-sidebar-button{
+      font-size: 50px;
+      color: red;
+      position: relative;
+      z-index: 1000;
+      float:left;
+      margin-left: 10px;
+       display: none;
+   }
   
   /* phone */
   @media (max-width: 600px) { 
@@ -579,11 +601,13 @@
   }
   .sidebar{
       /* Display & Box Model */
-  
-      display: none;
-     width:0%; 
-  
+width:0;
+padding:0;
+transition: 0.5s;
+
   }
+
+
   .close-sidebar-button{
     position: absolute;
     font-size: 50px;
@@ -591,6 +615,10 @@
     margin-left: 170px;
     margin-top: -20px;
     }
+
+  .open-sidebar-button{
+    display: block;
+  }
     
   
   
