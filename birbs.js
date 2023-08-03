@@ -184,11 +184,23 @@ function createBirdPanel(birb) {
 
 
   labels.appendChild(sciNameLabel);
+  labels.appendChild(sciName);
+
   labels.appendChild(orderLabel);
+  labels.appendChild(order);
+
+
   labels.appendChild(familyLabel);
+  labels.appendChild(family);
+
   labels.appendChild(statusLabel);
+  labels.appendChild(status);
   labels.appendChild(lengthLabel);
+  labels.appendChild(length);
   labels.appendChild(weightLabel);
+  labels.appendChild(weight);
+
+
 
   /*
   birbText.appendChild(sciName);
@@ -210,14 +222,13 @@ function createBirdPanel(birb) {
   myArticle.appendChild(credit);
   myArticle.appendChild(colourCircle);
 
-  myArticle.appendChild(engName);
-  myArticle.appendChild(sciName);
-  myArticle.appendChild(order);
-  myArticle.appendChild(family);
-  myArticle.appendChild(otherNames);
-  myArticle.appendChild(status);
-  myArticle.appendChild(length);
-  myArticle.appendChild(weight);
+  // myArticle.appendChild(engName);
+  // myArticle.appendChild(sciName);
+  // myArticle.appendChild(order);
+  // myArticle.appendChild(family);
+
+  // myArticle.appendChild(length);
+  // myArticle.appendChild(weight);
 
 
   //Image and article are children of section
