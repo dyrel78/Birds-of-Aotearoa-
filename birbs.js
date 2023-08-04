@@ -53,9 +53,33 @@ async function populate() {
 // 2 articles inside the bird container
 function createBirdPanel(birb) {
 
-  const imageArticle = document.createElement("div");
+
+  // <div myArticle> 
+  //   <div> Colour circle</div>
+  //   <div> Photo</div>
+  //   <div> Credit</div>
+  //   <div> Primary Name</div>
+  //   <div> English Name</div>
+      //    <div labels >
+            //     <div> Scientific Name</div>
+            //     <div> Order</div>
+            //     <div> Family</div>
+            //     <div> Other Names</div>
+            //     <div> Status</div>
+            //     <div> Size</div>
+            //     <div> Length</div>
+            //     <div> Weight</div>
+      //    </div>
+      //<div> 
+      // Back of card
+      //</div>
+
+      
+  // </div>
+
   const myArticle = document.createElement("div");
   const photoArticle = document.createElement("div");
+  const cardBack = document.createElement("div");
 
   const colourCircle = document.createElement("div");
   const photo = document.createElement("img");
@@ -77,6 +101,7 @@ function createBirdPanel(birb) {
   colourCircle.setAttribute("class", "birb-colour-circle");
   photoArticle.setAttribute("class", "birb-photo-article");
   myArticle.setAttribute("class", "birb-article");
+  cardBack.setAttribute("class", "birb-card-back");
 
 
   photo.setAttribute("class", "birb-photo");
@@ -100,12 +125,15 @@ function createBirdPanel(birb) {
   order.textContent = birb.order;
   family.textContent = birb.family;
   status.textContent = birb.status;
+
   const otherNamesList = birb.other_names;
   for (const x of otherNamesList) {
     const li = document.createElement("li");
     li.textContent = x;
     otherNames.appendChild(li);
   }
+
+  
   photo.src = birb.photo.source;
   credit.textContent = "Photo by " + birb.photo.credit;
   length.textContent = birb.size.length.value + " " + birb.size.length.units;
@@ -225,7 +253,6 @@ function createBirdPanel(birb) {
   myArticle.appendChild(primaryName);
   myArticle.appendChild(credit);
   myArticle.appendChild(colourCircle);
-
   myArticle.appendChild(engName);
   // myArticle.appendChild(sciName);
   // myArticle.appendChild(order);
@@ -238,9 +265,11 @@ function createBirdPanel(birb) {
   //Image and article are children of section
   // section.appendChild(imageArticle);
   myArticle.appendChild(labels);
+  //cardBack.appendChild(otherNames);
+
 
   section2.appendChild(myArticle);
-
+  //section2.appendChild(cardBack);
   // Label not part of birc article 
   /*section.appendChild(labels);*/
 
@@ -248,6 +277,8 @@ function createBirdPanel(birb) {
   //section.appendChild(birbText);
   //myArticle.append(imageArticle);
 
+
+  
 
   // COLOUR CHANGE HOVER
 
@@ -279,7 +310,13 @@ function searchNames(input, bird) {
   const sciName = bird.scientific_name.toLowerCase();
   const engName = bird.english_name.toLowerCase();
 
-   
+  for(let i = 0; i < bird.other_names.length; i++) {
+    const otherName = bird.other_names[i].toLowerCase();
+    if(otherName.includes(input)) {
+      return true;
+    }
+  }
+
   if (maoriName.includes(input) || sciName.includes(input) || engName.includes(input)) {
     return true;
   } else {

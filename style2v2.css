@@ -349,6 +349,11 @@
   
   }
   
+  .birb-card-back{
+  width: 100%;
+  position: absolute;
+  }
+
   
   .birb-photo{
   width: 100%;
