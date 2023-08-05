@@ -4,6 +4,32 @@ populate();
 
 
 
+// function closeSidebar(){
+//   if(document.querySelector("sidebar").style.width > "0"){
+//   document.getElementById("sidebar").style.width = "0";
+//   }else{
+//     document.getElementById("sidebar").style.width = "200"; 
+//   }
+// }
+
+function closeSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  const sidebarWidth = parseInt(sidebar.style.width);
+
+  if (sidebarWidth > 0) {
+    sidebar.style.width = "0";
+    // sidebar.style.visibility = "hidden";
+  } else {
+    sidebar.style.width = "200px";
+    // sidebar.style.visibility = "visible";
+
+
+  }
+}
+
+function openSidebar(){
+  document.getElementById("sidebar").style.width = "200";
+}
 
 
 // object.addEventListener("click", myScript);
@@ -264,12 +290,13 @@ function createBirdPanel(birb) {
 
     cardBack.appendChild(otherNamesHeader);
     cardBack.appendChild(otherNames);
-    cardBack.appendChild(backImage);
+    //cardBack.appendChild(backImage);
 
  
 
   myArticle.appendChild(cardFront);
   myArticle.appendChild(cardBack);
+
 
   cardHouse.appendChild(myArticle);
   section2.appendChild(cardHouse);
@@ -500,13 +527,6 @@ function getStatusColor(status) {
   }
 }
 
-function closeSidebar(){
-  document.getElementById("sidebar").style.width = "0";
-}
-
-function openSidebar(){
-  document.getElementById("sidebar").style.width = "200";
-}
 
 
 // const openBar = document.getElementById("open-sidebar-button");

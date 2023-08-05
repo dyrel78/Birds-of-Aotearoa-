@@ -591,11 +591,12 @@ grid-area: right;
 
 
 .close-sidebar-button{
-  position: absolute;
+  position: fixed;
+  color: white;
   font-size: 50px;
-  color: red;
-  margin-left: 170px;
-  margin-top: -20px;
+  margin-left: -450px;
+  margin-top: 0px;
+  visibility: visible;
   }
 
 
@@ -741,20 +742,22 @@ header{
 }
 .sidebar{
     /* Display & Box Model */
+transition: 0.5s;
+/* visibility: hidden; */
 width:0;
 padding:0;
-transition: 0.5s;
 
 }
 
 
-.close-sidebar-button{
+/* .close-sidebar-button{
   position: absolute;
+  left:-150px;
   font-size: 50px;
-  color: red;
-  margin-left: 170px;
-  margin-top: -20px;
-  }
+  top:20px;
+  color: white;
+  visibility: visible;
+  } */
 
 .open-sidebar-button{
   display: block;
