@@ -231,9 +231,11 @@ function createBirdPanel(birb) {
 
   labels.appendChild(sciNameLabel);
   labels.appendChild(sciName);
+  labels.appendChild(familyLabel);
+
   labels.appendChild(orderLabel);
   labels.appendChild(order);
-  labels.appendChild(familyLabel);
+
   labels.appendChild(family);
   labels.appendChild(statusLabel);
   labels.appendChild(status);
