@@ -47,6 +47,8 @@ h1 {
 h2{
 width: 100%;
 bottom: 20px;
+top: 20px;
+position :absolute;
 }
 footer {
   background-color: #15c243;
@@ -236,6 +238,8 @@ select{
   border: 1px solid #ccc;
   background-color: #fff;
   font: small;
+  top: 10px;
+  position :relative;
 }
 input{
   width: 100%;
@@ -248,6 +252,8 @@ input{
     background-color: #fff;
     font: small;
     padding: 3px;
+    top: 10px;
+    position :relative;
   
 }
 
@@ -261,8 +267,8 @@ input:hover{
 }
 
 .birbs-found{
-  position: relative;
-  top: 27px;
+  position: absolute;
+  top: 260px;
   font-size: 13px;
   color: #303834 ;
   left: 5px;
@@ -288,10 +294,16 @@ input:hover{
 div label{
 font-size: 15px;
 color: #303834 ;
+top: 260px;
+position: absolute;
+
 }
 aside label{
   font-size: 15px;
   color: #303834 ;
+  top: 10px;
+position :relative;
+
   }
 
 form{
@@ -718,7 +730,7 @@ Flipping
     position: absolute;
     color: white;
     font-size: 50px;
-    margin-left: 20px;
+    margin-left: 30px;
     /* margin-top: 0px;  */
     visibility: visible;
     }
@@ -742,25 +754,22 @@ Flipping
 
 body {
 }
+.sidebar{
+
+}
 
 header{
     margin: 0px;
    padding:0px;
 }
-.sidebar{
+/* .sidebar{
 transition: 0.5s;
-
-/* visibility: hidden; */
 width:0;
 padding:0;
 
-}
+} */
 
-
-
-
-
-
+ /* Keep */
 body{
   grid-template-columns: 200px 3fr;
 
@@ -783,14 +792,14 @@ display: none;
 
 /* Small screens (phones) */
 @media (max-width: 1044px) {
-/* header{
-    margin: 0;
+header{
+    margin: px;
    
 }
 
 h1 {
     margin: 0;
-} */
+}
 
 footer {
     display: none;

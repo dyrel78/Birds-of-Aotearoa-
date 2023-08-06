@@ -1,6 +1,11 @@
 let URL = "./nzbird.json";
 
 populate();
+closeSidebar();
+
+
+
+
 
 
 
@@ -12,35 +17,66 @@ populate();
 //   }
 // }
 
-closeSidebar();
 
 function closeSidebar() {
   const sidebar = document.getElementById("sidebar");
+  const header = document.getElementById("filter-bird-header");
   const sidebarWidth = parseInt(sidebar.style.width);
   if (sidebarWidth == 200) {
-    sidebar.style.width = "0";
-    sidebar.style.visibility = "hidden";
-    sidebar.style.transition=  "0.25s";
+     sidebar.style.width = "0";
+    // sidebar.style.visibility = "hidden";
+    sidebar.style.padding = "0px";
+     sidebar.style.transition=  "0.25s";
 
-  } else {
-    sidebar.style.width = "200px";
-    sidebar.style.transition=  "0.5s";
-     sidebar.style.visibility = "visible";
+    // sidebar.style.top = "60px";
 
 
+
+
+  } else if (sidebarWidth == 0 /* Open sidebar*/) {
+     sidebar.style.width = "200px";
+     sidebar.style.padding = "10px";
+     sidebar.style.transition=  "0.5s";
+  //   sidebar.style.visibility = "visible";
+  //  sidebar.style.top = "60px";
+
+
+  
   }
-}
 
+  //       padding:10px; 
+// position: fixed;
+// z-index: 1;
+// top: 60px;
+//    closeSidebar();
+
+}
 
 resize();
 window.addEventListener('resize', resize);
 function resize(){
-  if(document.documentElement.clientWidth < 600){
-    document.getElementById("sidebar").style.width = "0";
-    sidebar.style.visibility = "hidden";
+  const sidebar = document.getElementById("sidebar");
+  if(document.documentElement.clientWidth <= 600){
 
-  }else{
-    document.getElementById("sidebar").style.width = "200";
+    document.getElementById("sidebar").style.width = "0";
+    
+     sidebar.style.padding = "0px";
+     // sidebar.style.visibility = "hidden";
+    // sidebar.style.width = "0px";
+    // sidebar.style.visibility = "hidden";
+
+
+    // sidebar.style.transition=  "0.5s";
+
+
+  }else
+  
+  if(document.documentElement.clientWidth > 600){
+    document.getElementById("sidebar").style.width = "200px";
+     sidebar.style.padding = "10px";
+
+    // sidebar.style.transition=  "0.5s";
+    // sidebar.style.visibility = "visible";
 
 
 
@@ -48,9 +84,7 @@ function resize(){
 }
 
 
-function openSidebar(){
-  document.getElementById("sidebar").style.width = "200";
-}
+
 
 
 // object.addEventListener("click", myScript);
