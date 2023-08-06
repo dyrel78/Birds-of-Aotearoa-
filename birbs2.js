@@ -12,29 +12,41 @@ populate();
 //   }
 // }
 
+closeSidebar();
+
 function closeSidebar() {
   const sidebar = document.getElementById("sidebar");
   const sidebarWidth = parseInt(sidebar.style.width);
-
-  if (sidebarWidth > 1) {
-    sidebar.style.transition=  "0.5s";
+  if (sidebarWidth == 200) {
     sidebar.style.width = "0";
-    sidebar.style.padding = "0";
+    sidebar.style.visibility = "hidden";
+    sidebar.style.transition=  "0.25s";
 
-/* visibility: hidden; */
-
-    // sidebar.style.visibility = "hidden";
   } else {
     sidebar.style.width = "200px";
-    sidebar.style.padding = "10px";
     sidebar.style.transition=  "0.5s";
-
-
-    // sidebar.style.visibility = "visible";
+     sidebar.style.visibility = "visible";
 
 
   }
 }
+
+
+resize();
+window.addEventListener('resize', resize);
+function resize(){
+  if(document.documentElement.clientWidth < 600){
+    document.getElementById("sidebar").style.width = "0";
+    sidebar.style.visibility = "hidden";
+
+  }else{
+    document.getElementById("sidebar").style.width = "200";
+
+
+
+  }
+}
+
 
 function openSidebar(){
   document.getElementById("sidebar").style.width = "200";
