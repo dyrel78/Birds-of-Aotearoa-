@@ -41,6 +41,7 @@ h1 {
   padding:10px;
   display: block;
   border:0px;
+  
 
 }
 
@@ -384,6 +385,13 @@ position: relative;
 position: relative;
 display: flex;
 gap:20px;
+z-index: 1;
+ 
+/* grid-column-start:2; */
+
+
+
+
 
 }
 
@@ -420,6 +428,8 @@ box-shadow: 5px 5px 5px 5px var(--circle-bg-color);
 /*Flip */
 transition: transform 0.8s;
 transform-style: preserve-3d;
+
+z-index: 1;
 
 
 }
@@ -466,7 +476,7 @@ border-bottom: 0px;
 
 .sidebar >h2{
 position: relative;
-top: 5px;
+top: 11px;
 left:10px;
 
 }
@@ -550,8 +560,9 @@ margin:0px;
 } */
 
 .error{
-position: relative;
+  position: relative;
 width: 100%;
+left:30%;
 }
 
 
@@ -617,6 +628,8 @@ Flipping
   width:330px;
   height: 500px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  z-index: 1;
+
 }
  /*House Front and back*/
 .birb-article {
@@ -640,11 +653,16 @@ Flipping
   width: 100%;
   height: 100%;
    backface-visibility: hidden; 
+   z-index: 1;
+
 }
+
 
 /* Style the front side (fallback if image is missing) */
 .birb-card-front {
   color: black;
+  z-index: 1;
+
 }
 
 /* Style the back side */
@@ -660,6 +678,7 @@ Flipping
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  z-index: 1;
 
 }
 
@@ -693,7 +712,6 @@ Flipping
   position: absolute;
   width: 200px;
   height: 250px;
-  z-index: 1000;
   top: 200px;
   left: 60px;
 }
@@ -710,16 +728,28 @@ Flipping
   }
   
   .birb-photo:hover{
-    transform: scale(1.5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* transform: scale(1.5);  */
+    height:60%;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
     transition: cubic-bezier(0.77, 0, 0.175, 1);
     /* transition: box-shadow 0.25s ease-in-out; */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    box-shadow: 2px 2px 10px 5px var(--circle-bg-color);
-    z-index: 1000;
+    /* border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px; */
+
+
+    /* overflow: visible; */
+    /* /plac image in centre of screen; */
+  
+    
+
+    /* box-shadow: 2px 2px 10px 5px var(--circle-bg-color); */
+
+    position: relative;
+    z-index: 999;
+    /* Make it so image is on top of everything*/
+
   
   }
 
@@ -751,7 +781,10 @@ Flipping
 
 /* phone */
 @media (max-width: 600px) { 
-
+header{
+        grid-area: header;
+        grid-column: span 2; 
+}
 body {
 }
 .sidebar{

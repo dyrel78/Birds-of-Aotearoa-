@@ -181,9 +181,10 @@ function createBirdPanel(birb) {
 
   //Giving ID's
   //imageArticle.setAttribute("class", "birb-image-article");
-    cardHouse.setAttribute("class", "birb-card-house");
+   
   colourCircle.setAttribute("class", "birb-colour-circle");
   myArticle.setAttribute("class", "birb-article");
+  cardHouse.setAttribute("class", "birb-card-house");
   cardBack.setAttribute("class", "birb-card-back");
     cardFront.setAttribute("class", "birb-card-front");
 
@@ -335,13 +336,13 @@ function createBirdPanel(birb) {
 
 
 
-
-    cardFront.appendChild(photo);
+cardFront.appendChild(photo); 
     cardFront.appendChild(primaryName);
     cardFront.appendChild(credit);
     cardFront.appendChild(colourCircle);
     cardFront.appendChild(engName);
     cardFront.appendChild(labels);
+
 
     cardBack.appendChild(otherNamesHeader);
     cardBack.appendChild(otherNames);
