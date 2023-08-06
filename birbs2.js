@@ -16,11 +16,20 @@ function closeSidebar() {
   const sidebar = document.getElementById("sidebar");
   const sidebarWidth = parseInt(sidebar.style.width);
 
-  if (sidebarWidth > 0) {
+  if (sidebarWidth > 1) {
+    sidebar.style.transition=  "0.5s";
     sidebar.style.width = "0";
+    sidebar.style.padding = "0";
+
+/* visibility: hidden; */
+
     // sidebar.style.visibility = "hidden";
   } else {
     sidebar.style.width = "200px";
+    sidebar.style.padding = "10px";
+    sidebar.style.transition=  "0.5s";
+
+
     // sidebar.style.visibility = "visible";
 
 
