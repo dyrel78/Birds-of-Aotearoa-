@@ -164,11 +164,12 @@ background-color: lightgray;
 padding:10px; 
 position: fixed;
 z-index: 1;
-top: 60px;
+top: 80px;
 left: 0;
 overflow-x: hidden;
 padding-top: 20px;
 transition: 0.5s;
+z-index: 100000;
 
 
 -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .7);
